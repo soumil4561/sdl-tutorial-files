@@ -17,6 +17,7 @@ file(GLOB_RECURSE SOURCES src/*.cpp)
 # Add the main executable
 add_executable(game main.cpp ${SOURCES})
 
-# Link SDL2
-find_package(SDL2 REQUIRED)
-target_link_libraries(game PUBLIC SDL2::SDL2 SDL2::SDL2main)
+# Link SDL2, SDL2_image, and SDL2_mixer and SDL2_ttf
+target_link_libraries(game SDL2 SDL2_image SDL2_mixer SDL2_ttf)
+
+
